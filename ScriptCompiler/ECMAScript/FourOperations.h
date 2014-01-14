@@ -2,6 +2,7 @@
 #include <iostream>
 #include <ostream>
 #include <string>
+#include <list>
 
 using namespace std;
 class CFourOperations
@@ -9,18 +10,20 @@ class CFourOperations
 public:
 	CFourOperations();
 	//Init the code sourse
-	CFourOperations(string);
+	CFourOperations(wstring);
 	//Init the output stream and the code sourse
-	CFourOperations(ostream&, string);
+	CFourOperations(ostream&, wstring);
 	//Invoke the code sourse and then print the result
 	void Invok();
 public:
-	void SetSourse(string);
+	void SetSourse(wstring);
 
 private:
 	void parseSourse();
 
 private:
-	ostream o;
-	string sourse;
-}
+	ostream& o;
+	wstring sourse;
+	list<wstring> lexeme_token_attribute;
+
+};
