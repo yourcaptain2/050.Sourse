@@ -1,6 +1,7 @@
 #include "FourOperations.h"
 #include "AST.h"
 #include "KeyWord.h"
+#include "Expr.h"
 
 //
 CFourOperations::CFourOperations():o(cout),sourse(wstring())
@@ -30,7 +31,11 @@ void CFourOperations::Invok()
 
 		parseSourse();
 		o<<"Invok finished."<<endl;
-		}
+
+		//perform a expression 
+		wcout<<CExpr(CExpr(10, L"+", 5), L"*", CExpr(L"-", 2))<<endl;;
+
+	}
 	catch(exception* e)
 	{
 		o<<"Some error occurred."<<endl;

@@ -30,6 +30,24 @@
     <ClCompile Include="SymbolTable.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ExprNode.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Literal.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ExprUnaryNode.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ExprBinaryNode.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Expr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ExprIntNode.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FourOperations.h">
@@ -45,6 +63,24 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="SymbolTable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ExprNode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Literal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ExprUnaryNode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ExprBinaryNode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Expr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ExprIntNode.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

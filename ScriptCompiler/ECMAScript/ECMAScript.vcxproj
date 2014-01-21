@@ -62,16 +62,28 @@
   <ItemGroup>
     <ClCompile Include="AST.cpp" />
     <ClCompile Include="ECMAScript.cpp" />
+    <ClCompile Include="Expr.cpp" />
+    <ClCompile Include="ExprBinaryNode.cpp" />
+    <ClCompile Include="ExprIntNode.cpp" />
+    <ClCompile Include="ExprNode.cpp" />
     <ClCompile Include="FourOperations.cpp" />
     <ClCompile Include="KeyWord.cpp" />
+    <ClCompile Include="Literal.cpp" />
     <ClCompile Include="SymbolTable.cpp" />
+    <ClCompile Include="ExprUnaryNode.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AST.h" />
     <ClInclude Include="ECMAScript.h" />
+    <ClInclude Include="Expr.h" />
+    <ClInclude Include="ExprBinaryNode.h" />
+    <ClInclude Include="ExprIntNode.h" />
+    <ClInclude Include="ExprNode.h" />
     <ClInclude Include="FourOperations.h" />
     <ClInclude Include="KeyWord.h" />
+    <ClInclude Include="Literal.h" />
     <ClInclude Include="SymbolTable.h" />
+    <ClInclude Include="ExprUnaryNode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

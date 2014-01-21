@@ -13,8 +13,40 @@
 typedef void (*lpParseSourse)(const wchar_t* pSourse);
 
 using namespace std;
+
+//Trace debug info
+class MyTrace
+{
+public:
+	MyTrace():open_state(true)
+	{
+	}
+
+	void Print(string s)
+	{
+		if(open_state)
+		{
+			cout<<s<<endl;
+		}
+	}
+	void OpenLog()
+	{
+		open_state = true;
+	}
+	void CloseLog()
+	{
+		open_state = false;
+	}
+private:
+	bool open_state;
+};
+
+
 int _tmain(int argc, _TCHAR* argv[])
 {
+	MyTrace trace;
+	//log.CloseLog();
+
 	wstring sourse;
 	wchar_t psourse[1000];
 	wmemset(psourse, 0 ,1000);
@@ -64,7 +96,7 @@ int _tmain(int argc, _TCHAR* argv[])
 				}
 			}
 			
-			if(!fclose(f))
+			if(fclose(f) == EOF)
 			{
 				cout<<"Failed to close sourse file."<<endl;
 			}/*
@@ -94,7 +126,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		ParseSourse = (lpParseSourse)GetProcAddress(hDll,"ParseSourse");
 		if(ParseSourse)
 		{
-			//cout<<"start parse"<<endl;
+			trace.Print("starting parse......");
 			ParseSourse(sourse.c_str());
 		}
 	}
