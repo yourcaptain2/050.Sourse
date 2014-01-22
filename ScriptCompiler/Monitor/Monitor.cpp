@@ -41,7 +41,6 @@ private:
 	bool open_state;
 };
 
-
 int _tmain(int argc, _TCHAR* argv[])
 {
 	MyTrace trace;

@@ -3,28 +3,31 @@
 
 using namespace std;
 
-enum SYMBOL_TYPE
+namespace www_yesdata_net
 {
-	 NAME =1
-	,OPERATOR
-	,PROCEDURE
-	,VALUE
-} enum_symbol_type;
+	enum SYMBOL_TYPE
+	{
+		 NAME =1
+		,OPERATOR
+		,PROCEDURE
+		,VALUE
+	} enum_symbol_type;
 
-class SymbolTable
-{
-public:
-	SymbolTable(void);
-	~SymbolTable(void);
+	class SymbolTable
+	{
+	public:
+		SymbolTable(void);
+		~SymbolTable(void);
 
-public:
-	void perform();
+	public:
+		void perform();
 
-private:
-	/*wstring name;
-	bool keyword;
-	SYMBOL_TYPE type;
-	SymbolTable& item;*/
+	private:
+		/*wstring name;
+		bool keyword;
+		SYMBOL_TYPE type;
+		SymbolTable& item;*/
 
-};
+	};
 
+}

@@ -48,6 +48,9 @@
     <ClCompile Include="ExprIntNode.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="MyTrace.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FourOperations.h">
@@ -81,6 +84,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="ExprIntNode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MyTrace.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -6,26 +6,30 @@
 
 using namespace std;
 
-class CExprUnaryNode :
-	public CExprNode
+namespace www_yesdata_net
 {
-	//friend wostream& operator<<(wostream&, CExprUnaryNode&);
-	friend class CExpr;
-public:
-	// unary for int type
-	//CExprUnaryNode(wstring o, int v);
-	CExprUnaryNode(const wstring o, const CExpr& v);
-	virtual ~CExprUnaryNode(void);
+	class CExprUnaryNode :
+		public CExprNode
+	{
 
-protected:
-	CExprUnaryNode(void); //
+		//friend wostream& operator<<(wostream&, CExprUnaryNode&);
+		friend class CExpr;
+	public:
+		// unary for int type
+		//CExprUnaryNode(wstring o, int v);
+		CExprUnaryNode(const wstring o, const CExpr& v);
+		virtual ~CExprUnaryNode(void);
 
-protected:
-	virtual void print(wostream&);
+	protected:
+		CExprUnaryNode(void); //		
 
-private:
-	CExpr node;
-	wstring op;
+	protected:
+		virtual void print(wostream&);
+		virtual CExprUnaryNode* copy();
 
-};
+	private:
+		CExpr node;
+		wstring op;
 
+	};
+}

@@ -1,6 +1,8 @@
 #include "KeyWord.h"
 #include <algorithm>
 
+using namespace www_yesdata_net;
+
 CKeyWords::CKeyWords()
 {
 	key_word_list.push_back(L"+");

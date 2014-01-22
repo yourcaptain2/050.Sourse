@@ -2,7 +2,9 @@
 #include "AST.h"
 #include "KeyWord.h"
 #include "Expr.h"
+#include "MyTrace.h"
 
+using namespace www_yesdata_net;
 //
 CFourOperations::CFourOperations():o(cout),sourse(wstring())
 {}
@@ -32,8 +34,11 @@ void CFourOperations::Invok()
 		parseSourse();
 		o<<"Invok finished."<<endl;
 
-		//perform a expression 
-		wcout<<CExpr(CExpr(10, L"+", 5), L"*", CExpr(L"-", 2))<<endl;;
+		//test CExpr
+		CMyTrace::OpenLog();
+		//CExpr(CExpr(5), L"+", 6);
+		CExpr exp = CExpr(L"-",CExpr(CExpr(5, L"+", 6),L"/",11));
+		wcout<<exp<<endl;
 
 	}
 	catch(exception* e)

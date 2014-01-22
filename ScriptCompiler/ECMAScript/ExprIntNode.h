@@ -5,18 +5,21 @@
 
 using namespace std;
 
-class CExprIntNode :
-	public CExprNode
+namespace www_yesdata_net
 {
-	//friend wostream& operator<<(wostream&, CExprIntNode&);
-	friend class CExpr;
-public:
-	CExprIntNode(int);
-	virtual ~CExprIntNode(void);
-protected:
-	CExprIntNode(void);
-	void print(wostream&);
-private:
-	int val;
-};
-
+	class CExprIntNode :
+		public CExprNode
+	{
+		//friend wostream& operator<<(wostream&, CExprIntNode&);
+		friend class CExpr;
+	public:
+		CExprIntNode(int);
+		virtual ~CExprIntNode(void);
+	protected:
+		CExprIntNode(void);
+		virtual void print(wostream&);
+		virtual CExprIntNode* copy();
+	private:
+		int val;
+	};
+}
