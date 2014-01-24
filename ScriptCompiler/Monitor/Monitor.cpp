@@ -7,12 +7,24 @@
 #include <string>
 //#include "E:\项目管理\140.Front-end-Interaction-Involotion\050.Sourse\ScriptCompiler\ECMAScript\ECMAScript.h"
 
+
 #define DllImport   __declspec( dllimport )
 #define DllExport   __declspec( dllexport )
 
-typedef void (*lpParseSourse)(const wchar_t* pSourse);
-
 using namespace std;
+
+class __declspec( dllimport )  MyClass
+	{
+		public:
+			MyClass();
+			virtual ~MyClass();
+			virtual bool Print(string);
+		private:
+			string default_str;
+	};
+
+typedef void (*lpParseSourse)(const wchar_t* pSourse);
+typedef MyClass* (*lpCreateMyClass)();
 
 //Trace debug info
 class MyTrace
@@ -128,6 +140,11 @@ int _tmain(int argc, _TCHAR* argv[])
 			trace.Print("starting parse......");
 			ParseSourse(sourse.c_str());
 		}
+
+		lpCreateMyClass CreateMyClass;
+		CreateMyClass = (lpCreateMyClass)GetProcAddress(hDll,"CreateMyClass");
+		MyClass* me = CreateMyClass();
+		me->Print("Create MyClass OK");
 	}
 
 	return 0;
